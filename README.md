@@ -20,7 +20,7 @@ ES6中module的语法
         - 增加了保留字（比如 protected、static 和 interface）
         - 顶层的this指向undefined，不应该在顶层代码使用this
 ### export 命令
-- 用于规定模块的对外接口,一个模块就是一个独立的文件，如果想从外部获取该模块的变量，需要使用 export 关键字输出该变量  
+- 用于规定模块的对外接口，一个模块就是一个独立的文件，如果想从外部获取该模块的变量，需要使用 export 关键字输出该变量  
 ```
 export var c = "1";  
 // 或者  
