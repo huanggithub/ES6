@@ -19,5 +19,6 @@ ES6中module的语法
         - 不能使用 fn.caller 和 fn.arguments 获取函数调用的堆栈
         - 增加了保留字（比如 protected、static 和 interface）
         - 顶层的this指向undefined，不应该在顶层代码使用this
-### export 导出
-### import 导入
+### export 命令
+- 用于规定模块的对外接口
+### import 命令
