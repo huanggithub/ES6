@@ -24,7 +24,7 @@ ES6中module的语法
   一个模块就是一个独立的文件，如果想从外部获取该模块的变量，需要使用 export 关键字输出该变量  
 ```
 export var c = "1";  
-或者  
+// 或者  
 var c = "1";  
 var b = "2";  
 export {c,b};
