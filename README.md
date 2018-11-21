@@ -20,14 +20,36 @@ ES6中module的语法
         - 增加了保留字（比如 protected、static 和 interface）
         - 顶层的this指向undefined，不应该在顶层代码使用this
 ### export 命令
-- 用于规定模块的对外接口，一个模块就是一个独立的文件，如果想从外部获取该模块的变量，需要使用 export 关键字输出该变量  
+- 用于规定模块的对外接口，一个模块就是一个独立的文件，如果想从外部获取该模块的变量，需要使用 export 关键字输出该变量，可以做到动态更新，实时变化！  
 ```
 export var c = "1";  
 // 或者  
 var c = "1";  
 var b = "2";  
-export {c,b};
+export {c,b};  
+// 输出函数或类  
+export function sum(x,y){ return x+y };  
+// 还可以重命名-可以改两次以上奥  
+function v1(){};  
+function v2(){};  
+export { v1 as vA, v2 as vB, v2 as vC };  
+// 如果export处于块级作用域的话会报错，必须放在模块顶层
+function v(){ export default 'bar' // SyntaxError }
 ````
         
 ### import 命令
 - 用于输入其他模块提供的功能
+```
+import { xxx } from 'url';
+```
+### 模块的整体加载
+```
+import * as NAME from 'URL';
+```
+### export default 命令
+- 为模块指定默认输出  
+```
+export default funtion () {  
+    console.log('foo');  
+}  
+```
